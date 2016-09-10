@@ -1,0 +1,31 @@
+<ion-view view-title="Main" ng-app="starter.map">
+    <ion-content>
+      <!-- <div id="map" data-tap-disabled="true"></div>?key=AIzaSyDgm6bvN2d8afLhAD7jsXccf2ZRObJfY6E -->
+		<div id="map" map-lazy-load="https://maps.google.com/maps/api/js"
+		  map-lazy-load-params="{{googleMapsUrl}}">
+		  <ng-map id="mapcontentparent" zoom="10">
+		      <custom-marker id="me" position="0" on-click="showInfoWindowCustom(event,'personalSpeechBox')">
+		      <!-- style="background-image:url('./img/profile/me.png')" -->
+		      	<div class='location' ng-style="myImagePath != '' && {'background-image':'url('+myImagePath+')'}"></div>
+		      	<div class="pulse"></div>
+		      </custom-marker>
+		      <info-window id="personalSpeechBox">
+		        <div ng-non-bindable>
+		          <div id="recent" class="lastMessage">
+		            <span ng-bind="dateTime" class="when">5 mins ago:</span><span ng-bind="lastMessage" id="lastMessage"> Pizza party, byob! except anybody that isn't a vegetatian. No thanks psychopaths!</span>
+		          </div>
+		          <div id="new">
+		          	<form action=""> 
+		          		<textarea ng-model="textArea" id="myBox" ng-keyup="$event.keyCode == 13 && submitMessage()" class="newMessageBox" rows=4></textarea>
+		          	</form>
+		          </div>
+		        </div>
+		      </info-window>
+	        <!-- <bicycling-layer></bicycling-layer> -->
+		  </ng-map>
+		</div>
+    </ion-content>
+    <ion-footer-bar class="bar-dark">
+      <a ng-click="centerOnMe()" class="button button-icon icon ion-navigate">Me</a>
+    </ion-footer-bar>
+</ion-view>  

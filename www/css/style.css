@@ -1,0 +1,173 @@
+/* Empty. Add your own CSS if you like */
+/* white background and box outline */
+  .newMessageBox{
+  margin: 0px auto;
+  border: 1px solid #E8E8E8;
+  width: 90%;
+  border-radius: 8px;
+  resize: none;
+  padding: 10px;
+    margin: 5px -5px 10px 15px; 
+    font-family: sans-serif;  
+    color:#505050;
+  }
+  .lastMessage{
+    font-family: sans-serif;
+    color:#094415;
+    padding: 15px 0px 5px 15px; 
+    max-width:175px;
+  }
+  .lastMessage > .when{
+    font-family: sans-serif;
+  color: #B7B7B7;
+    font-weight: 800;
+    display: block;
+  }
+.gm-style > div:first-child > div + div > div:last-child > div > div:first-child > div
+{
+    /* we have to use !important because we are overwritng inline styles */
+    background-color: transparent; !important;
+    box-shadow: none !important;
+    width: auto !important;
+    height: auto !important;
+}
+
+/* arrow colour */
+.gm-style > div:first-child > div + div > div:last-child > div > div:first-child > div > div{
+	top: -57px !important;
+}
+.gm-style > div:first-child > div + div > div:last-child > div > div:first-child > div > div > div
+{
+    background-color: #fff !important; 
+
+}
+
+/* close button */
+.gm-style > div:first-child > div + div > div:last-child > div > div:last-child
+{
+    margin-right: 15px;
+    margin-top: -24px;
+}
+
+/* image icon inside close button */
+.gm-style > div:first-child > div + div > div:last-child > div > div:last-child > img
+{
+    display: block;
+}
+
+/* positioning of infowindow */
+.gm-style-iw
+{
+	background-color: #fff;
+	border-radius: 10px;
+    top: -30px !important;
+}
+#map {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+#map > ng-map{
+	width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.scroll {
+  height: 100%;
+}
+.speechBox{
+	background-color: #fff;
+	height:40px;
+	width: 100px;
+	display: block;
+	position: relative;
+}
+.location{
+	height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    background-size: contain;
+    background-position: 50%;
+}
+
+.bounce {
+  animation-name: bounce;
+  animation-duration: 1s;
+}
+/*
+.location:after {
+    content: "";
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    position: absolute;
+    margin: -15px 0 0 -15px;
+    animation: pulsate 3s ease-out;
+    animation-iteration-count: infinite;
+    opacity: 0;
+    box-shadow: 0 0 1px 2px #FFFFFF;
+    animation-delay: 0.1s;
+}*/
+
+.pulse {
+	background: #2AA243;
+    border-radius: 50%;
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    left: 35%;
+    top: 80%;
+    /* margin: 11px 0px 0px -12px; */
+    transform: rotateX(70deg);
+    z-index: -2;
+}
+.pulse:after {
+  content: "";
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  margin: -13px 0 0 -13px;
+  animation: pulsate 1s ease-out;
+  animation-iteration-count: infinite;
+  opacity: 0;
+  box-shadow: 0 0 1px 2px #2AA243;
+  animation-delay: 1.1s;
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(0.1, 0.1);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1.2, 1.2);
+    opacity: 0;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    opacity: 0;
+    transform: translateY(-2000px) rotate(-45deg);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateY(30px) rotate(-45deg);
+  }
+
+  80% {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(-45deg);
+  }
+}
